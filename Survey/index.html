@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <style> 
+body {
+    height: 100vh;
+    margin: 0%;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+#main-doc {
+  width: 99vw;
+  margin: 0;
+  padding: 0;
+}
+
+h1, p {
+    text-align: center;
+    margin: 1em auto;
+}
+
+#survey-form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-left: 0%;
+    overflow-x: hidden;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+    margin: 0;
+    width: 100%;
+}
+        </style>
+    </head>
+    <body>
+      <main id="main-doc">
+        <h1 id="tittle">B-MEIR Survey Form</h1>
+        <p id="description">Help Us Serve You Better By Taking This Short Survey</p>
+
+        <Form id="survey-form">
+          <textarea></textarea>
+          
+          <fieldset> 
+            <label for="name-label">Name<input  id="name" type="text" placeholder="Enter Your Name" required></label>
+            <label for="email-label">Email<input id="email" type="email" placeholder="Enter Your Email" required></label>
+            <label for="number-label">Age<input id="number" type="number" placeholder="Age" min="15" max="90" required></label>
+          </fieldset>
+
+          <fieldset>
+            <label for="gender">Male<input id="gender" type="radio" name="gender-type" value="gender"class="inline"></label>
+            <label for="gender">Female<input id="gender" type="radio" name="gender-type" value="gender"class="inline"></label>
+          </fieldset>
+
+
+          <fieldset>
+            <legend for="referrer">How did you hear about us?
+                <select id="dropdown">
+                    <option value="">(select all that applies)</option>  
+                    <option value="1">Facebook</option>
+                    <option value="2">Twitter</option>
+                    <option value="3">Instagram</option>
+                    <option value="4">Youtube</option>
+                </select>
+            </legend>
+          </fieldset>
+           
+          <fieldset>
+            <legend for="rating">How would you rate our service</legend>
+            <label for="rating">Very Satisfied<input id="rating" type="checkbox" name="rating" value="rate" class="inline"></label>
+            <label for="rating">Satisfied<input id="rating" type="checkbox" name="rating" value="rate" class="inline"></label>
+            <label for="rating">Dissatisfied<input id="rating" type="checkbox" name="rating" value="rate"></label>
+            <label>Very Dissatisfied<input id="rating" type="checkbox" name="rating" value="rate"></label>
+          </fieldset>
+
+          <fieldset>
+            <label for="bio">Tell us a little about you</label>
+            <label for="bio"><input id="about" type="text"></label>
+          </fieldset>
+
+          <fieldset>
+            <label for="improve">What can we do to improve</label>
+            <label for="improve"><input id="improve" type="text"></label>
+          </fieldset>
+
+          <fieldset>
+            <label for="submit"><input id="submit" type="submit"></label>
+          </fieldset>
+        </Form>
+      </main>
+    </body>
+</html>
